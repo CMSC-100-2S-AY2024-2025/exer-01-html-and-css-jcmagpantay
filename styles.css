@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/roboto/Roboto.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("./fonts/roboto/Roboto-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/raleway/Raleway.ttf");
+}
+
 body {
   margin: 0;
   display: flex;
@@ -25,8 +40,10 @@ body {
   max-width: 100px;
 }
 
-#title {
+#nav-title {
   font-family: "Roboto", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: large;
 }
 
 #title-section {
@@ -34,6 +51,35 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#nav > #link-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+#nav > #link-section a {
+  text-decoration: none;
+  color: black;
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Underline Animation, check references*/
+#nav > #link-section a {
+  background: linear-gradient(currentColor 0 0) bottom left/
+    var(--underline-width, 0%) 0.15em no-repeat;
+  color: black;
+  display: inline-block;
+  padding: 0 0.5em 0.2em;
+  text-decoration: none;
+  transition: background-size 0.5s;
+}
+
+#nav > #link-section a:hover {
+  --underline-width: 100%;
+  font-weight: 500;
 }
 
 .headerText {
